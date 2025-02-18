@@ -18,3 +18,4 @@ This Website Uses the [OpenWeather](https://openweathermap.org/) API to deliver 
 
 1. Type Which Location where you want to its weather
 
+https://github.com/user-attachments/assets/b931f56b-5654-4a31-af35-ddac683666e8
