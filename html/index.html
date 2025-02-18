@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8"> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the site responsive -->
+    <meta name="description" content="Weather App providing current weather and hourly forecast"> <!-- SEO description -->
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="/css/style.css"> <!-- Link to external CSS for styling -->
+
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> <!-- Icon library -->
+
+    <title>Weather App</title> <!-- Title of the application -->
+</head>
+<body>
+    <!-- Weather App Container -->
+    <div id="weather-container">
+        <!-- Application Header -->
+        <h2><span>Weather</span> App</h2> <!-- Title with styled span for emphasis -->
+
+        <!-- Input field for city name -->
+        <input 
+            type="text" 
+            id="city" 
+            placeholder="Enter city" 
+            aria-label="City name input" 
+        > <!-- Input box where the user enters the city name -->
+
+        <!-- Search Button -->
+        <button 
+            onclick="getWeather()" 
+            aria-label="Search for weather"
+        >Search</button> <!-- Button to trigger the weather search -->
+
+        <!-- Weather Icon -->
+        <img 
+            id="weather-icon" 
+            alt="Weather icon representing current weather"
+        > <!-- Placeholder for weather icon -->
+
+        <!-- Temperature Display -->
+        <div id="temp-div"></div> <!-- Div to dynamically display the temperature -->
+
+        <!-- Weather Info -->
+        <div id="weather-info"></div> <!-- Div to display city name and weather description -->
+
+        <!-- Hourly Forecast -->
+        <div id="hourly-forecast"></div> <!-- Div to display hourly weather forecast -->
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="/js/script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

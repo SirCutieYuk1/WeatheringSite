@@ -1,0 +1,168 @@
+/* General Body Styles */
+body {
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #ff9900); /* Background gradient animation */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family for the entire page */
+  background-size: 400% 400%; /* Makes the gradient animation smooth */
+  display: flex; 
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+  animation: gradientAnimation 15s ease infinite; /* Infinite gradient animation */
+}
+
+/* Weather Container */
+#weather-container {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  max-width: 400px; /* Maximum width for container */
+  width: 90%; /* Responsive width for smaller screens */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for a frosted effect */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+#weather-container:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Typography */
+h2, label, p {
+  color: #333; /* Dark gray text color */
+  margin: 8px 0; /* Vertical spacing */
+}
+
+span {
+  color: #ff1744; /* Bright red for emphasis */
+  font-weight: bold; /* Make the text bold */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition effects */
+}
+
+span:hover {
+  color: #d50000; /* Darker red on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Input Field */
+input {
+  width: calc(100% - 16px); /* Full width minus padding */
+  padding: 10px; /* Internal padding for better usability */
+  box-sizing: border-box; /* Include padding in width */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light gray border */
+  margin-top: 20px; /* Space above the input field */
+  animation: gradientAnimation 10s ease infinite; /* Gradient animation for border */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effects */
+}
+
+input:focus {
+  border-color: #00ffcc; /* Aqua border on focus */
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.5); /* Glowing border effect */
+  outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+  background: linear-gradient(135deg, #4caf50, #8bc34a); /* Green gradient background */
+  color: white; /* White text color */
+  padding: 10px; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 20px; /* Space above the button */
+  width: 120px; /* Fixed button width */
+  font-size: 16px; /* Readable font size */
+  transition: 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #66bb6a, #aed581); /* Lighter green gradient */
+  color: black; /* Black text on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* Shrink slightly on click */
+  background: linear-gradient(135deg, #388e3c, #689f38); /* Darker green gradient */
+}
+
+/* Weather Details */
+#temp-div p {
+  font-size: 60px; /* Large font for temperature display */
+  margin-top: -20px; /* Adjust spacing above */
+}
+
+#weather-info {
+  font-size: 20px; /* Standard font size for weather details */
+}
+
+#weather-icon {
+  width: 150px; /* Icon width */
+  height: 150px; /* Icon height */
+  margin: 0 auto; /* Center the icon */
+  display: none; /* Initially hide the icon */
+}
+
+/* Hourly Forecast Section */
+#hourly-forecast {
+  margin-top: 30px; /* Space above the forecast section */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  display: flex; /* Flex layout for alignment */
+  gap: 15px; /* Space between hourly items */
+  justify-content: start; /* Align items to the start */
+}
+
+.hourly-item {
+  flex: 0 0 auto; /* Prevent items from shrinking or growing */
+  width: 80px; /* Fixed width for each item */
+  display: flex; /* Flex layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align content */
+  font-size: 14px; /* Small font for hourly info */
+  color: #333; /* Dark gray text */
+}
+
+.hourly-item img {
+  width: 40px; /* Icon width */
+  height: 40px; /* Icon height */
+  margin-bottom: 5px; /* Space below the icon */
+}
+
+/* Section Heading */
+#hourly-heading {
+  color: #fff; /* White text color */
+  margin-top: 20px; /* Space above the heading */
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%; /* Start position of gradient */
+  }
+  50% {
+    background-position: 100% 50%; /* Middle position of gradient */
+  }
+  100% {
+    background-position: 0% 50%; /* End position of gradient */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #temp-div p {
+    font-size: 48px; /* Smaller font size for temperature */
+  }
+
+  button {
+    width: 100%; /* Full-width button for smaller screens */
+  }
+
+  #hourly-forecast {
+    gap: 10px; /* Reduce gap between hourly items */
+  }
+}
