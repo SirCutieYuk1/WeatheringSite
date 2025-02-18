@@ -1,6 +1,6 @@
 // Main function to fetch weather data and display it
 function getWeather() {
-    const apiKey = ' '; // OpenWeather API key INPUT HERE
+    const apiKey = '8bf76b3a0978aea3d495d49aca16a670'; // OpenWeather API key INPUT HERE
     const city = document.getElementById('city').value.trim(); // Get city input and trim whitespace
 
     // Check if the city field is empty
